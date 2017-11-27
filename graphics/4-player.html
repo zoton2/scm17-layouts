@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html data-sceneid="4-player">
+	<head>
+		<meta charset="UTF-8">
+		
+		<!-- CSS -->
+		<link href="css/common.css" rel="stylesheet"/>
+		<link href="css/4-player.css" rel="stylesheet"/>
+		<link href="css/blue.css" rel="stylesheet"/>
+		
+		<!-- JavaScript -->
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/letteringjs/jquery.lettering.js"></script>
+		<!--<script src="../bower_components/jquery-textfill/source/jquery.textfill.min.js"></script>-->
+		<script src="js/layout-style.js"></script>
+		<script src="js/animation.js"></script>
+		<script src="js/run-info.js"></script>
+		<script src="js/player-info.js"></script>
+		<script src="js/timer.js"></script>
+		<script src="js/host.js"></script>
+	</head>
+	<body>
+		<!-- Background image -->
+		<div id="background"></div>
+		
+		<!-- Game area(s) -->
+		<div id="gameCapture1" class="gameCapture storageBox"></div>
+		<div id="gameCapture2" class="gameCapture storageBox"></div>
+		<div id="gameCapture3" class="gameCapture storageBox"></div>
+		<div id="gameCapture4" class="gameCapture storageBox"></div>
+		
+		<div id="topBox" class="storageBox flexContainer">
+			<!-- Runner 1 -->
+			<div id="runnerInfoContainer1" class="runnerInfoContainer flexContainer">
+				<img class="runnerLogo nameLogo">
+				<span class="runnerName">Miltrivd</span>
+			</div>
+			
+			<!-- Donation total -->
+			<div id="donationTotalBox" class="flexContainer">
+				<img id="stcLogo" src="images/stc-logo.png">
+				<span id="donationTotal">$0</span>
+			</div>
+			
+			<!-- Runner 2 -->
+			<div id="runnerInfoContainer2" class="runnerInfoContainer flexContainer">
+				<img class="runnerLogo nameLogo">
+				<span class="runnerName">Miltrivd</span>
+			</div>
+		</div>
+		
+		<!-- Host -->
+		<div id="hostBox" class="storageBox flexContainer">
+			<span id="hostText">Host: Maral</span>
+		</div>
+		
+		<div id="middleBox" class="storageBox flexContainer">
+			<!-- Run game/category -->
+			<div id="runTitlesContainer" class="flexContainer">
+				<div>
+					<div id="runGame">Dark Souls</div>
+					<div id="runCategory">All Bosses (Cheese)</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- SCM logo -->
+		<div id="eventLogo" class="eventLogoNormal"></div>
+		
+		<!-- Sponsors -->
+		<div id="sponsorBox" class="flexContainer">
+			<div id="sponsorLogo" class="sponsorLogoCurrent"></div>
+		</div>
+		
+		<div id="bottomBox" class="storageBox flexContainer">
+			<!-- Runner 3 -->
+			<div id="runnerInfoContainer3" class="runnerInfoContainer flexContainer">
+				<img class="runnerLogo nameLogo">
+				<span class="runnerName">Miltrivd</span>
+			</div>
+			
+			<!-- Timer/estimate -->
+			<div id="timerContainer" class="flexContainer">
+				<div id="estimateTimer">est. 6:00:00</div>
+					<div id="currentTimer">4:12:59</div>
+			</div>
+			
+			<!-- Runner 4 -->
+			<div id="runnerInfoContainer4" class="runnerInfoContainer flexContainer">
+				<img class="runnerLogo nameLogo">
+				<span class="runnerName">Miltrivd</span>
+			</div>
+		</div>
+	</body>
+</html>

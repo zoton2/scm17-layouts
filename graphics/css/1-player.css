@@ -1,0 +1,52 @@
+#eventLogo {
+	left: 31px;
+	top: 25px;
+	width: 157px;
+	height: 163px;
+}
+
+.gameCapture {
+	width: 1024px;
+	height: 576px;
+}
+
+#gameCapture1 {
+	left: 229px;
+	top: 23px;
+}
+
+#donationTotalBox {
+	left: 35px;
+	top: 622px;
+	width: 152px;
+	height: 75px;
+}
+
+#hostBox {
+	left: 229px;
+	top: 622px;
+	width: 230px;
+	height: 75px;
+}
+
+#hostText {
+	font-size: 30px;
+}
+
+#runInfoBox {
+	left: 478px;
+	top: 622px;
+	width: 578px;
+	height: 75px;
+}
+
+.runnerLogo {
+	height: 36px;
+}
+
+#sponsorBox {
+	left: 1077px;
+	top: 622px;
+	width: 175px;
+	height: 75px;
+}
