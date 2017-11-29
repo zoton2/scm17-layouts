@@ -110,8 +110,13 @@ body {
 	text-align: center;
 }
 
+#hostBox span {
+	opacity: 0;
+}
+
 /* Adds text to start and end of estimate. */
 #estimateTimer:before {content: 'est. ';}
+#estimateTimer:after {content: ':00';}
 
 /* Each character in the timer is in a span; setting width so the numbers appear monospaced. */
 #currentTimer span {

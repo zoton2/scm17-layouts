@@ -8,6 +8,8 @@ $(() => {
 	var gameCategory = $('#runCategory');
 	var gameEstimate = $('#estimateTimer');
 	var timerText = $('#currentTimer');
+	var sponsorBox = $('#sponsorBox');
+	var sceneID = $('html').attr('data-sceneid');
 	
 	var runDataActiveRun = nodecg.Replicant('runDataActiveRun', speedcontrolBundle);
 	runDataActiveRun.on('change', (newVal, oldVal) => {
@@ -21,5 +23,7 @@ $(() => {
 		animationSetField(gameCategory, runData.category);
 		animationSetField(gameEstimate, runData.estimate);
 		animationSetField(timerText); // Fade out/in the timer as well.
+		if (sceneID === '3-player')
+			animationSetField(sponsorBox); // Fade out/in sponsor logos as well.
 	}
 });

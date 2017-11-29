@@ -44,10 +44,6 @@
 	height: 57px;
 }
 
-#hostText {
-	font-size: 24px;
-}
-
 #middleBox {
 	left: 542px;
 	top: 139px;
@@ -97,6 +93,11 @@
 	width: 300px;
 }
 
+#currentTimer {
+	font-size: 40px;
+}
+
 #estimateTimer {
 	padding-right: 10px;
+	font-size: 27px;
 }

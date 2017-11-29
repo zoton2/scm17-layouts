@@ -7,7 +7,7 @@ $(() => {
 	var sponsorImages = nodecg.Replicant('assets:sponsors');
 	sponsorImages.on('change', (newVal) => {
 		if (!sponsorRotationInit && newVal.length > 0) {
-			setInterval(rotateNormal, 60000);
+			setInterval(rotateNormal, 60000); // 60 seconds
 			rotateNormal();
 			sponsorRotationInit = true;
 		}

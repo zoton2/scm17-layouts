@@ -9,11 +9,14 @@ $(() => {
 	var speedcontrolBundle = 'nodecg-speedcontrol';
 	
 	// JQuery selectors.
+	var sceneID = $('html').attr('data-sceneid');
 	var playerContainers = $('.runnerInfoContainer'); // Array
+	if (sceneID === '2-player')
+		playerContainers = $('.runnerInfoContainer .runnerWrapper'); // Array
 	
 	// Declaring other variables.
-	var displayNameFor = 5000;
-	var displayTwitchFor = 5000;
+	var displayNameFor = 45000;
+	var displayTwitchFor = 15000;
 	var teamMemberIndex = []; // Stores what team member of each team is currently being shown.
 	var currentTeamsData = []; // All teams data is stored here for reference when changing.
 	var rotationTimeout; // Stores the timeout used for switching between name and twitch.
