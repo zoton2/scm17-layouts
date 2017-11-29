@@ -106,6 +106,10 @@ body {
 	line-height: 70%;
 }
 
+#hostBox {
+	text-align: center;
+}
+
 /* Adds text to start and end of estimate. */
 #estimateTimer:before {content: 'est. ';}
 
@@ -131,6 +135,7 @@ body {
 }
 
 .sponsorLogoNext {
+	position: absolute;
 	opacity: 0;
 }
 
