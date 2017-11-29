@@ -9,7 +9,6 @@ $(() => {
 	donationTotal.on('change', (newVal, oldVal) => {
 		// On initial page load so no animation is needed.
 		if (!oldVal) {
-			console.log('no old value')
 			var value = newVal.toLocaleString('en-US', {minimumFractionDigits: 0});
 			$donationTotal.html('$'+value);
 		}

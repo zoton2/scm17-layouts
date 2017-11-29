@@ -106,6 +106,10 @@
 	height: 128px;
 }
 
+#sponsorLogo {
+	height: calc(100% - 30px);
+}
+
 #donationTotalBox {
 	left: 837px;
 	top: 635px;

@@ -31,6 +31,18 @@
         "file": "change-host.html"
       }
 	],
+    "assetCategories": [
+      {
+        "name": "sponsors",
+        "title": "Sponsor Logos",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "png",
+          "gif"
+        ]
+      }
+    ],
     "graphics": [
       {
         "file": "intermission.html",

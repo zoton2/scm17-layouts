@@ -108,7 +108,6 @@ body {
 
 /* Adds text to start and end of estimate. */
 #estimateTimer:before {content: 'est. ';}
-#estimateTimer:after {content: ':00';}
 
 /* Each character in the timer is in a span; setting width so the numbers appear monospaced. */
 #currentTimer span {
@@ -121,7 +120,6 @@ body {
 #sponsorLogo {
 	width: calc(100% - 15px);
 	height: calc(100% - 15px);
-	background-image: url('../images/stc-logo-full.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -132,7 +130,6 @@ body {
 	opacity: 1;
 }
 
-/* Not used yet. */
 .sponsorLogoNext {
 	opacity: 0;
 }
