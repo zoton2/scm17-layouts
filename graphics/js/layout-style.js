@@ -31,7 +31,7 @@ $(() => {
 	}
 	
 	function changeLayoutStyle(runData, defaultStyle) {
-		var flatName = flattenGameName(runData.game);
+		var flatName = (runData) ? flattenGameName(runData.game) : '';
 		
 		if (!defaultStyle && flatName.startsWith('darksouls') && !flatName.startsWith('darksoulsi')) {
 			switch(sceneID) {

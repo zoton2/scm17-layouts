@@ -60,32 +60,32 @@
 #upNextHeaderBox {
 	left: 164px;
 	top: 273px;
-	width: 468px;
+	width: 655px;
 }
 
 #upNextBox {
 	left: 164px;
 	top: 297px;
-	width: 464px;
-	height: 124px;
+	width: 651px;
+	height: 174px;
 	border-top: 0;
 }
 
 #onDeckHeaderBox {
-	left: 646px;
-	top: 273px;
-	width: 468px;
+	left: 164px;
+	top: 493px;
+	width: 655px;
 }
 
 #onDeckBox {
-	left: 646px;
-	top: 297px;
-	width: 464px;
-	height: 124px;
+	left: 164px;
+	top: 517px;
+	width: 651px;
+	height: 174px;
 	border-top: 0;
 }
 
-#prizesHeaderBox {
+/*#prizesHeaderBox {
 	left: 183px;
 	top: 453px;
 	width: 624px;
@@ -97,13 +97,13 @@
 	width: 620px;
 	height: 210px;
 	border-top: 0;
-}
+}*/
 
 #sponsorBox {
 	left: 837px;
-	top: 470px;
+	top: 291px;
 	width: 256px;
-	height: 128px;
+	height: 178px;
 }
 
 #sponsorLogo {
@@ -112,7 +112,7 @@
 
 #donationTotalBox {
 	left: 837px;
-	top: 635px;
+	top: 639px;
 	width: 256px;
 	height: 50px;
 }

@@ -39,12 +39,14 @@ function intermissionCodeForceRefresh() {
 			if (!runDataArray.value[indexOfCurrentRun+i]) break;
 			next4Runs.push(runDataArray.value[indexOfCurrentRun+i]);
 		}
-		cycleOnDeck();
-		onDeckInterval = setInterval(cycleOnDeck, 10000);
+		if (next4Runs.length) {
+			cycleOnDeck();
+			onDeckInterval = setInterval(cycleOnDeck, 10000);
+		}
 	}
 	
 	function cycleOnDeck() {
-		if (onDeckIndex >= next4Runs.length) i = 0;
+		if (onDeckIndex >= next4Runs.length) onDeckIndex = 0;
 		updateInformationInBox(next4Runs[onDeckIndex], $('#onDeckBox'));
 		onDeckIndex++;
 	}
