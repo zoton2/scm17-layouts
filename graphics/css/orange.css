@@ -19,11 +19,6 @@
 	background-image: url('../images/orange/scm-logo-intermission.png');
 }
 
-
-#currentTimer {
-	color: #e2a000;
-}
-
 .runnerInfoContainer .runnerNameWrapper {
 	background-image: url('../images/orange/3p-runner-bg.png');
 }
@@ -35,3 +30,9 @@
 .runnerEdge {
 	content: url('../images/orange/3p-runner-edge.png');
 }
+
+/* Different colours for each state the timer can be in. */
+.timer_paused {color: #dfb54f;}
+.timer_running {color: #e2a000;}
+.timer_stopped {color: #e0c686;}
+.timer_finished {color: #b07d01;}

@@ -21,10 +21,39 @@ $(() => {
 	var currentTeamsData = []; // All teams data is stored here for reference when changing.
 	var rotationTimeout; // Stores the timeout used for switching between name and twitch.
 	var init = true; // Tracks if this is the first time things are being shown since changing.
+	var relay = false;
+	var changingRelay = false;
 	
 	var runDataActiveRun = nodecg.Replicant('runDataActiveRun', speedcontrolBundle);
 	runDataActiveRun.on('change', (newVal, oldVal) => {
-		if (newVal) updateSceneFields(newVal);
+		if (newVal) {
+			// Runner display is treated differently for the relay race.
+			if (newVal.game === 'All Souls Games' || newVal.category.toLowerCase().indexOf('relay') >= 0) {
+				relay = true;
+				if (!changingRelay)
+					setTimeout(() => {updateSceneFields(newVal);}, 1000);
+			}
+			
+			else {
+				relay = false;
+				updateSceneFields(newVal);
+			}
+		}
+	});
+	
+	var team1RunnerIndex = nodecg.Replicant('team1RunnerIndex', {defaultValue:0,persistent:false});
+	var team2RunnerIndex = nodecg.Replicant('team2RunnerIndex', {defaultValue:0,persistent:false});
+	team1RunnerIndex.on('change', (newVal, oldVal) => {
+		if (relay) {
+			if (!changingRelay)
+				setTimeout(() => {updateSceneFields(runDataActiveRun.value);}, 1000);
+		}
+	});
+	team2RunnerIndex.on('change', (newVal, oldVal) => {
+		if (relay) {
+			if (!changingRelay)
+				setTimeout(() => {updateSceneFields(runDataActiveRun.value);}, 1000);
+		}
 	});
 	
 	function updateSceneFields(runData) {
@@ -34,10 +63,22 @@ $(() => {
 		clearTimeout(rotationTimeout);
 		init = true;
 		
+		if (relay) {
+			changingRelay = true;
+			setTimeout(() => {changingRelay = false;}, 1000);
+			
+			runData.teams.forEach(function(team) {
+				var teamRunnerIndex = (team.name === 'Team 1') ? team1RunnerIndex.value : team2RunnerIndex.value;
+				var teamData = {showTeamIcon: false, members: []};
+				teamData.members.push(createMemberData(team.members[teamRunnerIndex]));
+				currentTeamsData.push(teamData);
+			});
+		}		
+		
 		// If there are multiple player info boxes but only 1 team and they have >1 player,
 		// puts the names in their own boxes. This is done by making them into "fake" 1 player
 		// teams but with a toggle to show the team icon.
-		if (playerContainers.length > 1 && runData.teams.length === 1 && runData.teams[0].members.length > 1) {
+		else if (playerContainers.length > 1 && runData.teams.length === 1 && runData.teams[0].members.length > 1) {
 			var team = runData.teams[0];
 			team.members.forEach(function(member) {
 				var teamData = {showTeamIcon: team.members.length > 1, members: []};

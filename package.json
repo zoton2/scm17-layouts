@@ -29,6 +29,12 @@
         "title": "Change Host",
         "width": 2,
         "file": "change-host.html"
+      },
+      {
+        "name": "relay-runner-changer",
+        "title": "Relay Runner Changer",
+        "width": 2,
+        "file": "relay-runner-changer.html"
       }
 	],
     "assetCategories": [
