@@ -9,6 +9,7 @@ $(() => {
 	
 	if (sceneID === 'intermission') {
 		nodecg.listenFor('forceRefreshIntermission', speedcontrolBundle, () => {
+			intermissionCodeForceRefresh();
 			setIntermissionStyle();
 		});
 	}
