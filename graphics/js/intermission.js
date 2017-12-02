@@ -52,8 +52,7 @@ function intermissionCodeForceRefresh() {
 	}
 	
 	function updateInformationInBox(runData, element) {
-		var gameName = (runData.game.startsWith('Dark Souls II:'))?'Dark Sousl II: SotFS':runData.game;
-		animationSetField($('.gameName', element), gameName);
+		animationSetField($('.gameName', element), runData.game);
 		var catAndRunner = runData.category;
 		if (runData.players.length > 1) catAndRunner += ' - Race';
 		else if (runData.players.length === 1) catAndRunner += ' - '+runData.players[0].names.international;
